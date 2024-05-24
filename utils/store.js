@@ -24,7 +24,7 @@ const useStore = create((set, get) => ({
   },
   generateScene: async (config) => {
     const { fileName: rawFileName, buffers } = get()
-    const fileName = config.pathPrefix && config.pathPrefix !== '' ? `${config.pathPrefix}/${rawFileName}` : rawFileName
+    const fileName = config.pathprefix && config.pathprefix !== '' ? `${config.pathprefix}/${rawFileName}` : rawFileName
     let result
     if (buffers.size !== 1) {
       const loadingManager = new THREE.LoadingManager()
